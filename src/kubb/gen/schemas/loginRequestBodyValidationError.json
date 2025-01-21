@@ -1,0 +1,1 @@
+{"required":["message","errors"],"properties":{"message":{"type":"string"},"errors":{"properties":{"email":{"type":"string"},"password":{"type":"string"}},"type":"object"}},"type":"object","x-readme-ref-name":"LoginRequestBodyValidationError"}

@@ -1,0 +1,1 @@
+{"required":["email","password"],"properties":{"email":{"type":"string","example":"test@example.com"},"password":{"type":"string","example":"password"}},"type":"object","x-readme-ref-name":"LoginRequest"}

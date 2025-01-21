@@ -1,0 +1,1 @@
+{"required":["id","name","email","emailVerifiedAt"],"properties":{"id":{"type":"integer"},"name":{"type":"string"},"email":{"type":"string","format":"email"},"emailVerifiedAt":{"type":"string"}},"type":"object","x-readme-ref-name":"UserResource"}

@@ -1,0 +1,1 @@
+{"required":["id","content","userId"],"properties":{"id":{"type":"integer"},"content":{"type":"string"},"userId":{"type":"integer"}},"type":"object","x-readme-ref-name":"PostResource"}

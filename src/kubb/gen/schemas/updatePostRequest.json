@@ -1,0 +1,1 @@
+{"required":["content"],"properties":{"content":{"type":"string"}},"type":"object","x-readme-ref-name":"UpdatePostRequest"}

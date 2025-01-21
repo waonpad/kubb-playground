@@ -1,0 +1,1 @@
+{"required":["message"],"properties":{"message":{"type":"string"}},"type":"object","x-readme-ref-name":"BaseError"}

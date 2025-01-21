@@ -1,0 +1,1 @@
+{"required":["message","errors"],"properties":{"message":{"type":"string"},"errors":{"properties":{"query.page":{"type":"string"}},"type":"object"}},"type":"object","x-readme-ref-name":"IndexPostRequestQueryValidationError"}

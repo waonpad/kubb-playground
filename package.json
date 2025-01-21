@@ -1,0 +1,30 @@
+{
+  "name": "kubb-playground",
+  "scripts": {
+    "prepare": "lefthook install",
+    "fmt": "biome format --write .",
+    "lnt": "biome lint --write .",
+    "che": "biome check --write .",
+    "test": "vitest run",
+    "test:w": "vitest watch --silent",
+    "test:ci": "vitest run --silent"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.4",
+    "@kubb/cli": "^3.5.1",
+    "@kubb/core": "^3.5.1",
+    "@kubb/plugin-oas": "^3.5.1",
+    "@kubb/plugin-ts": "^3.5.1",
+    "@kubb/plugin-zod": "^3.5.1",
+    "@types/bun": "latest",
+    "lefthook": "^1.8.2",
+    "vitest": "^2.1.4"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@kubb/plugin-client": "^3.5.1",
+    "zod": "^3.24.1"
+  }
+}
