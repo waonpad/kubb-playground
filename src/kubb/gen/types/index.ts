@@ -1,6 +1,3 @@
-export type { _401 } from "./_401.ts";
-export type { _403 } from "./_403.ts";
-export type { _500 } from "./_500.ts";
 export type { BaseError } from "./BaseError.ts";
 export type {
   CreatePost201,
@@ -24,6 +21,7 @@ export type {
   DeletePostMutation,
 } from "./DeletePost.ts";
 export type { DestroyPostRequestPathValidationError } from "./DestroyPostRequestPathValidationError.ts";
+export type { Forbidden } from "./Forbidden.ts";
 export type {
   GetAuthUser200,
   GetAuthUser401,
@@ -48,6 +46,7 @@ export type {
   GetPostsQuery,
 } from "./GetPosts.ts";
 export type { IndexPostRequestQueryValidationError } from "./IndexPostRequestQueryValidationError.ts";
+export type { InternalServerError } from "./InternalServerError.ts";
 export type {
   Login200,
   Login401,
@@ -65,6 +64,7 @@ export type { PostResource } from "./PostResource.ts";
 export type { ShowPostRequestPathValidationError } from "./ShowPostRequestPathValidationError.ts";
 export type { StorePostRequest } from "./StorePostRequest.ts";
 export type { StorePostRequestBodyValidationError } from "./StorePostRequestBodyValidationError.ts";
+export type { Unauthorized } from "./Unauthorized.ts";
 export type {
   UpdatePostPathParams,
   UpdatePost200,

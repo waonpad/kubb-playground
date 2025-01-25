@@ -8,7 +8,6 @@ import type {
   DeletePostMutationResponse,
   DeletePostPathParams,
 } from "../types/DeletePost.ts";
-import { deletePostMutationResponseSchema } from "../zod/deletePostSchema.ts";
 
 export function getDeletePostUrl({ id }: { id: DeletePostPathParams["id"] }) {
   return `${process.env.API_URL}/posts/${id}` as const;
@@ -28,5 +27,5 @@ export async function deletePost({ id }: { id: DeletePostPathParams["id"] }, con
     url: getDeletePostUrl({ id }).toString(),
     ...config,
   });
-  return deletePostMutationResponseSchema.parse(res.data);
+  return res;
 }

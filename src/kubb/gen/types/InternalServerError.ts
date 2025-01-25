@@ -1,3 +1,3 @@
 import type { BaseError } from "./BaseError.ts";
 
-export type _403 = BaseError;
+export type InternalServerError = BaseError;

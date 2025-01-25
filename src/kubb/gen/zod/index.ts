@@ -1,6 +1,3 @@
-export { _401Schema } from "./_401Schema.ts";
-export { _403Schema } from "./_403Schema.ts";
-export { _500Schema } from "./_500Schema.ts";
 export { baseErrorSchema } from "./baseErrorSchema.ts";
 export {
   createPost201Schema,
@@ -22,6 +19,7 @@ export {
   deletePostMutationResponseSchema,
 } from "./deletePostSchema.ts";
 export { destroyPostRequestPathValidationErrorSchema } from "./destroyPostRequestPathValidationErrorSchema.ts";
+export { forbiddenSchema } from "./forbiddenSchema.ts";
 export {
   getAuthUser200Schema,
   getAuthUser401Schema,
@@ -43,6 +41,7 @@ export {
   getPostsQueryResponseSchema,
 } from "./getPostsSchema.ts";
 export { indexPostRequestQueryValidationErrorSchema } from "./indexPostRequestQueryValidationErrorSchema.ts";
+export { internalServerErrorSchema } from "./internalServerErrorSchema.ts";
 export { loginRequestBodyValidationErrorSchema } from "./loginRequestBodyValidationErrorSchema.ts";
 export { loginRequestSchema } from "./loginRequestSchema.ts";
 export {
@@ -59,6 +58,7 @@ export { postResourceSchema } from "./postResourceSchema.ts";
 export { showPostRequestPathValidationErrorSchema } from "./showPostRequestPathValidationErrorSchema.ts";
 export { storePostRequestBodyValidationErrorSchema } from "./storePostRequestBodyValidationErrorSchema.ts";
 export { storePostRequestSchema } from "./storePostRequestSchema.ts";
+export { unauthorizedSchema } from "./unauthorizedSchema.ts";
 export { updatePostRequestBodyValidationErrorSchema } from "./updatePostRequestBodyValidationErrorSchema.ts";
 export { updatePostRequestPathValidationErrorSchema } from "./updatePostRequestPathValidationErrorSchema.ts";
 export { updatePostRequestSchema } from "./updatePostRequestSchema.ts";

@@ -1,7 +1,6 @@
 import client from "@kubb/plugin-client/clients/fetch";
 import type { RequestConfig, ResponseErrorConfig } from "@kubb/plugin-client/clients/fetch";
 import type { GetPost400, GetPost500, GetPostPathParams, GetPostQueryResponse } from "../types/GetPost.ts";
-import { getPostQueryResponseSchema } from "../zod/getPostSchema.ts";
 
 export function getGetPostUrl({ id }: { id: GetPostPathParams["id"] }) {
   return `${process.env.API_URL}/posts/${id}` as const;
@@ -17,5 +16,5 @@ export async function getPost({ id }: { id: GetPostPathParams["id"] }, config: P
     url: getGetPostUrl({ id }).toString(),
     ...config,
   });
-  return getPostQueryResponseSchema.parse(res.data);
+  return res;
 }

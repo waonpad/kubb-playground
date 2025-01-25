@@ -18,13 +18,16 @@
     "@kubb/plugin-zod": "^3.5.1",
     "@types/bun": "latest",
     "lefthook": "^1.8.2",
+    "orval": "^7.4.1",
     "vitest": "^2.1.4"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.4.2",
     "@kubb/plugin-client": "^3.5.1",
+    "hono": "^4.6.17",
     "zod": "^3.24.1"
   }
 }

@@ -8,7 +8,6 @@ import type {
   CreatePostMutationRequest,
   CreatePostMutationResponse,
 } from "../types/CreatePost.ts";
-import { createPostMutationResponseSchema } from "../zod/createPostSchema.ts";
 
 export function getCreatePostUrl() {
   return `${process.env.API_URL}/posts` as const;
@@ -27,5 +26,5 @@ export async function createPost(
     ResponseErrorConfig<CreatePost401 | CreatePost403 | CreatePost422 | CreatePost500>,
     CreatePostMutationRequest
   >({ method: "POST", url: getCreatePostUrl().toString(), data, ...config });
-  return createPostMutationResponseSchema.parse(res.data);
+  return res;
 }

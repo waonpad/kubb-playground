@@ -9,7 +9,7 @@
         "/login": {
             "post": {
                 "tags": [
-                    "Auth"
+                    "auth"
                 ],
                 "operationId": "login",
                 "requestBody": {
@@ -49,10 +49,10 @@
                         }
                     },
                     "401": {
-                        "$ref": "#/components/responses/401"
+                        "$ref": "#/components/responses/Unauthorized"
                     },
                     "500": {
-                        "$ref": "#/components/responses/500"
+                        "$ref": "#/components/responses/InternalServerError"
                     }
                 }
             }
@@ -60,7 +60,7 @@
         "/logout": {
             "post": {
                 "tags": [
-                    "Auth"
+                    "auth"
                 ],
                 "operationId": "logout",
                 "responses": {
@@ -68,10 +68,10 @@
                         "description": ""
                     },
                     "401": {
-                        "$ref": "#/components/responses/401"
+                        "$ref": "#/components/responses/Unauthorized"
                     },
                     "500": {
-                        "$ref": "#/components/responses/500"
+                        "$ref": "#/components/responses/InternalServerError"
                     }
                 },
                 "security": [
@@ -84,7 +84,7 @@
         "/me": {
             "get": {
                 "tags": [
-                    "Auth"
+                    "auth"
                 ],
                 "operationId": "getAuthUser",
                 "responses": {
@@ -99,10 +99,10 @@
                         }
                     },
                     "401": {
-                        "$ref": "#/components/responses/401"
+                        "$ref": "#/components/responses/Unauthorized"
                     },
                     "500": {
-                        "$ref": "#/components/responses/500"
+                        "$ref": "#/components/responses/InternalServerError"
                     }
                 },
                 "security": [
@@ -115,7 +115,7 @@
         "/posts/{id}": {
             "get": {
                 "tags": [
-                    "Post"
+                    "post"
                 ],
                 "summary": "Display the specified resource.",
                 "operationId": "getPost",
@@ -146,13 +146,13 @@
                         }
                     },
                     "500": {
-                        "$ref": "#/components/responses/500"
+                        "$ref": "#/components/responses/InternalServerError"
                     }
                 }
             },
             "delete": {
                 "tags": [
-                    "Post"
+                    "post"
                 ],
                 "summary": "Remove the specified resource from storage.",
                 "operationId": "deletePost",
@@ -176,13 +176,13 @@
                         }
                     },
                     "401": {
-                        "$ref": "#/components/responses/401"
+                        "$ref": "#/components/responses/Unauthorized"
                     },
                     "403": {
-                        "$ref": "#/components/responses/403"
+                        "$ref": "#/components/responses/Forbidden"
                     },
                     "500": {
-                        "$ref": "#/components/responses/500"
+                        "$ref": "#/components/responses/InternalServerError"
                     }
                 },
                 "security": [
@@ -193,7 +193,7 @@
             },
             "patch": {
                 "tags": [
-                    "Post"
+                    "post"
                 ],
                 "summary": "Update the specified resource in storage.",
                 "operationId": "updatePost",
@@ -244,13 +244,13 @@
                         }
                     },
                     "401": {
-                        "$ref": "#/components/responses/401"
+                        "$ref": "#/components/responses/Unauthorized"
                     },
                     "403": {
-                        "$ref": "#/components/responses/403"
+                        "$ref": "#/components/responses/Forbidden"
                     },
                     "500": {
-                        "$ref": "#/components/responses/500"
+                        "$ref": "#/components/responses/InternalServerError"
                     }
                 },
                 "security": [
@@ -263,7 +263,7 @@
         "/posts": {
             "get": {
                 "tags": [
-                    "Post"
+                    "post"
                 ],
                 "summary": "Display a listing of the resource.",
                 "operationId": "getPosts",
@@ -294,13 +294,13 @@
                         }
                     },
                     "500": {
-                        "$ref": "#/components/responses/500"
+                        "$ref": "#/components/responses/InternalServerError"
                     }
                 }
             },
             "post": {
                 "tags": [
-                    "Post"
+                    "post"
                 ],
                 "summary": "Store a newly created resource in storage.",
                 "operationId": "createPost",
@@ -336,13 +336,13 @@
                         }
                     },
                     "401": {
-                        "$ref": "#/components/responses/401"
+                        "$ref": "#/components/responses/Unauthorized"
                     },
                     "403": {
-                        "$ref": "#/components/responses/403"
+                        "$ref": "#/components/responses/Forbidden"
                     },
                     "500": {
-                        "$ref": "#/components/responses/500"
+                        "$ref": "#/components/responses/InternalServerError"
                     }
                 },
                 "security": [
@@ -726,7 +726,7 @@
             }
         },
         "responses": {
-            "401": {
+            "Unauthorized": {
                 "description": "",
                 "content": {
                     "application/json": {
@@ -736,7 +736,7 @@
                     }
                 }
             },
-            "403": {
+            "Forbidden": {
                 "description": "",
                 "content": {
                     "application/json": {
@@ -746,7 +746,7 @@
                     }
                 }
             },
-            "500": {
+            "InternalServerError": {
                 "description": "",
                 "content": {
                     "application/json": {
@@ -784,12 +784,12 @@
     },
     "tags": [
         {
-            "name": "Auth",
-            "description": "Auth"
+            "name": "auth",
+            "description": "auth"
         },
         {
-            "name": "Post",
-            "description": "Post"
+            "name": "post",
+            "description": "post"
         }
     ]
 }

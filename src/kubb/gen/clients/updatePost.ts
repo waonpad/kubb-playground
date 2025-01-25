@@ -10,7 +10,6 @@ import type {
   UpdatePostMutationResponse,
   UpdatePostPathParams,
 } from "../types/UpdatePost.ts";
-import { updatePostMutationResponseSchema } from "../zod/updatePostSchema.ts";
 
 export function getUpdatePostUrl({ id }: { id: UpdatePostPathParams["id"] }) {
   return `${process.env.API_URL}/posts/${id}` as const;
@@ -29,5 +28,5 @@ export async function updatePost(
     ResponseErrorConfig<UpdatePost400 | UpdatePost401 | UpdatePost403 | UpdatePost422 | UpdatePost500>,
     UpdatePostMutationRequest
   >({ method: "PATCH", url: getUpdatePostUrl({ id }).toString(), data, ...config });
-  return updatePostMutationResponseSchema.parse(res.data);
+  return res;
 }

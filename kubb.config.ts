@@ -28,8 +28,8 @@ export default defineConfig({
     pluginClient({
       client: "fetch",
       paramsType: "object",
-      parser: "zod",
       baseURL: "${process.env.API_URL}",
+      dataReturnType: "full",
     }),
   ],
 });

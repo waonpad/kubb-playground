@@ -1,6 +1,3 @@
-export type { _401 } from "./types/_401.ts";
-export type { _403 } from "./types/_403.ts";
-export type { _500 } from "./types/_500.ts";
 export type { BaseError } from "./types/BaseError.ts";
 export type {
   CreatePost201,
@@ -24,6 +21,7 @@ export type {
   DeletePostMutation,
 } from "./types/DeletePost.ts";
 export type { DestroyPostRequestPathValidationError } from "./types/DestroyPostRequestPathValidationError.ts";
+export type { Forbidden } from "./types/Forbidden.ts";
 export type {
   GetAuthUser200,
   GetAuthUser401,
@@ -48,6 +46,7 @@ export type {
   GetPostsQuery,
 } from "./types/GetPosts.ts";
 export type { IndexPostRequestQueryValidationError } from "./types/IndexPostRequestQueryValidationError.ts";
+export type { InternalServerError } from "./types/InternalServerError.ts";
 export type {
   Login200,
   Login401,
@@ -65,6 +64,7 @@ export type { PostResource } from "./types/PostResource.ts";
 export type { ShowPostRequestPathValidationError } from "./types/ShowPostRequestPathValidationError.ts";
 export type { StorePostRequest } from "./types/StorePostRequest.ts";
 export type { StorePostRequestBodyValidationError } from "./types/StorePostRequestBodyValidationError.ts";
+export type { Unauthorized } from "./types/Unauthorized.ts";
 export type {
   UpdatePostPathParams,
   UpdatePost200,
@@ -89,9 +89,6 @@ export { getGetPostsUrl, getPosts } from "./clients/getPosts.ts";
 export { getLoginUrl, login } from "./clients/login.ts";
 export { getLogoutUrl, logout } from "./clients/logout.ts";
 export { getUpdatePostUrl, updatePost } from "./clients/updatePost.ts";
-export { _401Schema } from "./zod/_401Schema.ts";
-export { _403Schema } from "./zod/_403Schema.ts";
-export { _500Schema } from "./zod/_500Schema.ts";
 export { baseErrorSchema } from "./zod/baseErrorSchema.ts";
 export {
   createPost201Schema,
@@ -113,6 +110,7 @@ export {
   deletePostMutationResponseSchema,
 } from "./zod/deletePostSchema.ts";
 export { destroyPostRequestPathValidationErrorSchema } from "./zod/destroyPostRequestPathValidationErrorSchema.ts";
+export { forbiddenSchema } from "./zod/forbiddenSchema.ts";
 export {
   getAuthUser200Schema,
   getAuthUser401Schema,
@@ -134,6 +132,7 @@ export {
   getPostsQueryResponseSchema,
 } from "./zod/getPostsSchema.ts";
 export { indexPostRequestQueryValidationErrorSchema } from "./zod/indexPostRequestQueryValidationErrorSchema.ts";
+export { internalServerErrorSchema } from "./zod/internalServerErrorSchema.ts";
 export { loginRequestBodyValidationErrorSchema } from "./zod/loginRequestBodyValidationErrorSchema.ts";
 export { loginRequestSchema } from "./zod/loginRequestSchema.ts";
 export {
@@ -150,6 +149,7 @@ export { postResourceSchema } from "./zod/postResourceSchema.ts";
 export { showPostRequestPathValidationErrorSchema } from "./zod/showPostRequestPathValidationErrorSchema.ts";
 export { storePostRequestBodyValidationErrorSchema } from "./zod/storePostRequestBodyValidationErrorSchema.ts";
 export { storePostRequestSchema } from "./zod/storePostRequestSchema.ts";
+export { unauthorizedSchema } from "./zod/unauthorizedSchema.ts";
 export { updatePostRequestBodyValidationErrorSchema } from "./zod/updatePostRequestBodyValidationErrorSchema.ts";
 export { updatePostRequestPathValidationErrorSchema } from "./zod/updatePostRequestPathValidationErrorSchema.ts";
 export { updatePostRequestSchema } from "./zod/updatePostRequestSchema.ts";
